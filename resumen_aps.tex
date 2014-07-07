@@ -1,0 +1,1483 @@
+\documentclass[a4paper,twosides]{article}
+\usepackage{relsize}
+\usepackage[top=0.6in, bottom=0.6in, left=0.5in, right=0.5in]{geometry}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+%\renewcommand{\baselinestretch}{0.7}
+
+\newlength{\wideitemsep}
+\setlength{\wideitemsep}{.8\itemsep}
+\addtolength{\wideitemsep}{-5pt}
+\let\olditem\item
+\renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
+
+
+\begin{document}
+\title{Resumen Administración de Proyectos de Software}
+\author{Pineda Leandro}
+\date{Junio 2014}
+\maketitle
+
+\tableofcontents
+
+\section{Algunos conceptos}
+
+\paragraph{Proceso:} un proceso es un conjunto de acciones y actividades interrelacionadas realizadas para obtener un producto, resultado o servicio predefinido. Cada procesos se caracteriza por:
+\begin{itemize}
+\item Entradas.
+\item Técnicas y Herramientas.
+\item Salidas.
+\end{itemize}
+
+\paragraph{Actividad:} es un conjunto de tareas propias de una persona o entidad, para facilitar la gestión o para cumplir con un objetivo de un proceso, que no vale la pena descomponer aunque sea posible. Generalmente, suele ser desarrollada por una persona de un mismo departamento, sección, o área administrativa. Por ejemplo, recibir documentación, registrar novedades del sistema, elaborar manual específico, etc.
+
+\paragraph{Tarea:} parte más pequeña (no fraccionable) en la que se puede descomponer una actividad. Este nivel de detalle es utilizado en los instructivos, por cuanto permite la asignación específica e indiscutible de las mismas a personas concretas, evitando eludir la responsabilidad del respectivo cumplimiento.
+
+\section{Gestión de la Integración}
+Define procesos y actividades para la integración de los diferentes elementos de la dirección de proyectos.
+Procesos y actividades necesarios para identificar, combinar, unificar y coordinar los procesos diversos y las actividades de la dirección de proyectos. Incluye actividades de consolidación y articulación, cruciales para completar proyectos, gestionar las expectativas y cumplir con los requerimientos.
+Por ejemplo, la estimación de costos necesaria para elaborar un plan de contingencia implica la integración de los procesos en las áreas de conocimiento relativas a \textbf{costo}, \textbf{tiempo} y a los \textbf{riesgos}.
+El gerente del proyecto es el integrador de todo el trabajo realizado en el proyecto, mientras que el equipo de proyecto es quien ejecuta las tareas del proyecto.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+\rowcolor{Gray} Integración & \ref{sec:desarrollar_pc} & \ref{sec:desarrollar_pp} & \ref{sec:gestionar_ejecucion_proyecto} & 
+\ref{sec:controlas_proyecto} - \ref{sec:control_integrado}
+&
+\ref{sec:cerrar_proyecto} \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+\subsection{Desarrollar el Acta de Constitución del Proyecto (PC)} \label{sec:desarrollar_pc}
+En este proceso se desarrolla el documento que autoriza formalmente la iniciación del proyecto. En él se documentan los requisitos fundamentales de producto o servicio requeridos.
+\paragraph{Objetivo:} Desarrollar el documento que autoriza formalmente la iniciación de un proyecto. Documentar los requisitos iniciales que satisfacen las necesidades y expectativas de los interesados.
+\paragraph{Entradas}
+\begin{itemize}
+\item Statement of Work (SOW): descripción narrativa de los productos o servicios que debe entregar el proyecto.
+Incluye las necesidades del negocio, la descripción del producto y un plan estratégico.
+\item Caso de Negocios: provee la información necesaria desde el punto de vista del negocio para determinar si el proyecto justifica la inversión.
+\item Contrato: aplica a clientes externos.
+\item Factores ambientales de la empresa.
+\item Activos de procesos de la organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto: es la opinión de una persona o un grupo de personas que utilizan su experiencia y conocimientos con el fin de proveer una respuesta apropiada a una consulta puntual.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Acta de Constitución del Proyecto (PC o Project Charter).
+Contiene, entre otras cosas:
+\begin{itemize}
+\item El propósito o justificación del proyecto.
+\item La identificación del gerente de proyecto asignado y su nivel de autoridad.
+\item Los requerimientos de alto nivel, versión preliminar.
+\item El presupuesto preliminar.
+\item Las fechas de entrega preliminares.
+\item Los requisitos de aprobación de los requerimientos.
+\item El sponsor del proyecto que autoriza el PC.
+\end{itemize}
+\end{itemize}
+\subsection{Desarrollar el Plan para la Dirección del Proyecto (PP)} \label{sec:desarrollar_pp}
+Aquí se documenta todo lo relacionado con la definición, planificación y coordinación de los planes de todas las áreas de conocimiento.
+\paragraph{Objetivo:} Documentar todas las acciones relacionadas con la definición, planificación y coordinación de los planes de todas las áreas de conocimiento. El Plan de Gestión del Proyecto (PP o Proyect Plan) define como se llevará adelante cada aspecto del proyecto en cuanto a su ejecución, control y finalización. Su contenido varía de acuerdo a la naturaleza de los proyectos. Se desarrolla hasta el cierre del proyecto.
+\paragraph{Entradas}
+\begin{itemize}
+\item Acta de Constitución del Proyecto (PC).
+\item Salidas de los procesos de planificación: corresponden al resto de las áreas de conocimiento. Ejemplo: Cronogramas, Alcance, Estimación final de costos.
+\item Factores Ambientales de la Empresa: afectan el proceso.
+\item Activos de los Procesos de la Organización:
+\begin{itemize}
+\item Políticas organizacionales.
+\item Procesos estandar de la organización.
+\item Plantillas.
+\item Información histórica.
+\item Lecciones aprendidas.
+\end{itemize}
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto: se utiliza para adaptar los procesos para cumplir con las necesidades del proyecto, desarrollar detalles técnicos que se incluirán en el plan de gestión, o determinar los conocimientos necesarios del personal a utilizar.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Plan de Gestión del Proyecto: integrado por todos los planes de las diferentes áreas.
+\begin{itemize}
+\item Plan de gestión del Alcance.
+\item Plan de gestión de RRHH.
+\item Plan de gestión del Tiempo.
+\item Plan de gestión de los Contratos.
+\item Plan de gestión del Costo.
+\item Plan de gestión de las Comunicaciones.
+\item Plan de gestión de la Calidad.
+\item Plan de gestión de los Riesgos.
+\end{itemize}
+El Plan de Gestión del Proyecto puede contener:
+\begin{itemize}
+\item Como se ejecutará y controlará el trabajo.
+\item Como se cumplirá con los objetivos del proyecto.
+\item El plan de gestión de cambios en el cual estará documentado como se controlarán los cambios.
+\item Las métricas de performance.
+\item Las necesidades de comunicación entre los interesados.
+\item Las líneas base del proyecto:
+\begin{itemize}
+\item Cronograma.
+\item Alcance.
+\item Costos.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\subsection{Dirigir y Gestionar la Ejecución del Proyecto} \label{sec:gestionar_ejecucion_proyecto}
+Proceso mediante el cual se lleva a cabo todo el trabajo previamente planificado con el fin de cumplir los objetivos del proyecto.
+Estas actividades abarcan, entre otras:
+\begin{itemize}
+\item Realizar las actividades necesarias para cumplir con los requisitos del proyecto.
+\item Crear los entregables del proyecto.
+\item Reunir, capacitar y dirigir a los miembros del equipo asignado al proyecto.
+\item Obtener, gestionar y utilizar los recursos, incluyendo materiales, herramientas, equipos e instalaciones.
+\item Implementar los métodos planificados.
+\item Generar los datos del proyecto, tales como costo, cronograma, avance técnico, de calidad y el estado, a fin de facilitar las proyecciones.
+\item Emitir las solicitudes de cambio y adaptar los cambios aprobados al alcance, a los planes y al entorno del proyecto.
+\item Gestionar los riesgos e implementar las actividades de respuesta a los mismos.
+\end{itemize}
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la Dirección del Proyecto (PP).
+\item Solicitudes de Cambio Aprobadas: amplían o reducen el alcance del proyecto. Pueden también modificar las políticas, al plan para la dirección del proyecto, a los procedimientos, los costos o los presupuestos, así como a la revisión de los cronogramas.
+\item Factores ambientales de la empresa.
+\item Activos de los Procesos de la Organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto.
+\item Sistema de Información para la Dirección de Proyectos (PMIS): herramienta de software para definir cronogramas, un sistema de gestión de la configuración, un sistema de recopilación y distribución de la información o interfaces de red a otros sistemas automáticos en linea.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Entregables: un entregable es cualquier producto, resultado o capacidad de prestar un servicio único y verificable que debe producirse para terminar un proceso, una fase o un proyecto.
+\item Información sobre el Desempeño del Trabajo: conforme el proyecto avanza, la información sobre las actividades del mismo se recopila de manera sistemática. Esta información puede relacionarse con diversos resultados de desempeño, incluyendo, entre otros: estado de los entregables, avance del cronograma, costos incurridos.
+\item Solicitudes de cambio: pueden ser directas o indirectas, generadas interna o externamente, opcionales u obligatorias. Pueden abarcar: acción correctiva, acción preventiva, corrección de defecto, ampliación.
+\item Actualizaciones al PP.
+\item Actualizaciones a los documentos del Proyecto: documentos de requisitos, registro de riesgos, registro de interesados.
+\end{itemize}
+
+\subsection{Monitorear y Controlar el Trabajo del Proyecto} \label{sec:controlas_proyecto}
+Procesos de supervisión del trabajo que se está realizando, comparando los resultados reales con los planes. Es el proceso que consiste en monitorear, analizar y regular el avance a fin de cumplir con los objetivos de desempeño definidos en el PP. Se realiza a lo largo del proyecto.
+Consiste en recopilar, medir y distribuir la información relativa al desempeño, y en evaluar las mediciones y las tendencias que van a permitir efectuar mejoras al proceso. Además, proporciona al equipo de dirección del proyecto conocimientos sobre la salud del proyecto y permite identificar las áreas susceptibles de requerir una atención especial.
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la Dirección del Proyecto (PP).
+\item Informes de Desempeño: también conocidos como reportes de estado. Deben ser preparados por el equipo del proyecto, detallando actividades, logros, hitos, incidentes identificados y problemas.
+\item Factores Ambientales de la Empresa.
+\item Activos de Procesos de la Organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio Experto.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Solicitudes de Cambio.
+\item Actualizaciones al PP: además de los planes de cronograma, alcance y calidad, se actualizan las líneas bases de alcance, del cronograma y desempeño de costos.
+\item Actualizaciones a los documentos del proyecto: proyecciones, informes de desempeño, registro de incidentes.
+\end{itemize}
+\subsection{Realizar el Control Integrado de Cambios} \label{sec:control_integrado}
+Aquí se revisan y aprueban los cambios sobre el producto o servicio. Estos cambios pueden afectar tanto al producto del proyecto como a la documentación o a los procesos organizativos.
+Es el proceso que consiste en revisar todas las solicitudes de cambio, aprobar los mismos y gestionar los cambios a los entregables, a los activos de los procesos de la organización, a los documentos del proyecto y al PP. Interviene desde el inicio del proyecto hasta su finalización.
+El plan para la dirección del proyecto, la declaración del alcance del proyecto y otros entregables se mantienen actualizados por medio de una gestión rigurosa y continua de los cambios, ya sea rechazándolos o aprobándolos, de manera tal que se asegure que sólo los cambios aprobados se incorporen a una línea base revisada.
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la dirección del proyecto.
+\item Información sobre el desempeño del trabajo.
+\item Solicitudes de cambio.
+\item Factores ambientales de la empresa.
+\item Activos de los procesos de la organización.
+\end{itemize}
+\paragraph{Herramienta y Técnicas}
+\begin{itemize}
+\item Juicio experto.
+\item Reuniones de control de cambios: un comité de control de cambios es responsable de reunirse y revisar las solicitudes de cambio, y de aprobar o rechazar dichas solicitudes.
+\end{itemize}
+\paragraph{Salidas}
+Si una solicitud de cambio se considera viable pero fuera del alcance del proyecto, su aprobación requiere un cambio en la linea base. Si la solicitud de cambio no se considera viable, ésta se rechazará y posiblemente se remita nuevamente al solicitante para más información.
+\begin{itemize}
+\item Actualizaciones de estado de las solicitudes de cambio.
+\item Actualizaciones al PP: todos los planes de gestión subsidiarios, las líneas base que están sujetas al proceso formal de control de cambios.
+\item Actualización a los documentos del proyecto.
+\end{itemize}
+Si un gerente funcional quiere hacerle un cambio al proyecto, los pasos a seguir serían los siguientes:
+\begin{itemize}
+\item Evaluar el impacto del cambio: ¿es necesario? ¿cómo afecta a otras variables?
+\item Buscar alternativas.
+\item Conseguir la aprobación del comité de cambios.
+\item Ajustar la línea base y el PP.
+\item Notificar a los interesados.
+\item Gestionar el proyecto acorde al nuevo plan.
+\end{itemize}
+\subsection{Cerrar Proyecto o Fase} \label{sec:cerrar_proyecto}
+En este proceso se concluyen formalmente todas las actividades con el fin de dar por completado formalmente el proyecto.
+Al cierre del proyecto, el director del proyecto revisará toda la información anterior de los cierres de las fases previas para asegurarse de que todo el trabajo del proyecto está completo y de que el proyecto ha alcanzado sus objetivos. Se debe revisar el PP para cerciorarse de su culminación (alcance completo) antes de considerar que el proyecto está cerrado.
+Cerrar el proyecto o una fase también incluye procedimientos de análisis y documentación de las razones de las acciones emprendidas en caso de que un proyecto se de por terminado antes de su culminación.
+Se llevan a cabo las actividades para:
+\begin{itemize}
+\item Satisfacer los criterios de terminación o salidas de la fase o del proyecto.
+\item Transferir los productos, servicios o resultados del proyecto a la siguiente fase o a la producción y/u operaciones.
+\item Recopilar los registros del proyecto o fase, auditar el éxito o fracaso del proyecto, reunir las lecciones aprendidas y archivar la información del proyecto para su uso futuro por parte de la organización
+\end{itemize}
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la dirección del proyecto.
+\item Entregables aceptados.
+\item Activos de los procesos de la organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Transferencia del producto, servicio o resultado final.
+\item Actualizaciones a los activos de los procesos de la organización.
+\end{itemize}
+
+\section{Gestión del Alcance del Proyecto}
+\textbf{Objetivo:} definir y controlar \textbf{que se incluye} y \textbf{que no se incluye} en el proyecto. El término puede referirse al alcance del producto, es decir, las características y funciones que definen un producto, servicio o resultado, o al alcance del proyecto, es decir, el trabajo que debe realizarse para entregar un producto, servicio o resultado con las características y funciones especificadas. La declaración del Alcance del Proyecto detallada y aprobada, y su EDT asociada junto con el diccionario de la EDT, constituyen la \emph{línea base del alcance del proyecto}.
+\par El grado de cumplimiento del \emph{alcance del proyecto} se mide con relación al PP, mientras que el grado de cumplimiento del \emph{producto} se mide con relación con los requisitos del producto.
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+\rowcolor{Gray} Alcance & & \ref{sec:recopilar_requisitos} - \ref{sec:definir_alcance} - \ref{sec:crear_edt} & & \ref{sec:verificar_alcance} - \ref{sec:controlar_alcance} & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+\subsection{Recopilar Requisitos} \label{sec:recopilar_requisitos}
+\par Es el proceso que consiste en definir y documentar las necesidades de los interesados a fin de cumplir con los objetivos del proyecto.
+\par Los requisitos incluyen las necesidades, deseos y expectativas cuantificada y documentadas del patrocinador, del cliente y de otros interesados. Deben recabarse, analizarse y registrarse con un nivel de detalle suficiente, que permita medirlos una vez que se inicia el proyecto. Recopilar requisitos significa \emph{definir y gestionar las expectativas del cliente}.
+\par Los requisitos constituyen la base de la EDT. La planificación del costo, del cronograma y de la calidad se efectúa en función de ellos.
+\paragraph{Entradas}
+\begin{itemize}
+\item Acta de Constitución del Proyecto (PC): se usa para proporcionar los requisitos de alto nivel del proyecto.
+\item Registro de interesados: se usa para identificar a los interesados que pueden proporcionar información acerca de los requisitos detallados del proyecto y del producto.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Entrevistas: es una manera formal o informal de obtener información acerca de los interesados a través de un diálogo directo con ellos.
+\item Grupos de Opinión: reúnen a los interesados y expertos en la materia.
+\item Talleres Facilitadores: son sesiones en donde de reúne a los interesados clave para definir los requisitos del producto.
+\item Técnicas grupales de Creatividad.
+\begin{itemize}
+\item Tormenta de Ideas o Brain Storming.
+\item Técnicas de grupo nominal: mejora la tormenta de ideas mediante un proceso de votación.
+\item Técnica Delphi: un grupo seleccionado de expertos contesta de manera anónima cuestionarios y proporciona retroalimentación respecto de las respuestas de cada ronde de recopilación de requisitos.
+\item Diagrama de Afinidad.
+\end{itemize}
+\item Técnicas grupales de Toma de Decisiones.
+\item Cuestionarios y Encuestas: conjunto de preguntas escritas, diseñadas para acumular información rápidamente, proveniente de un amplio número de encuestados.
+\item Observaciones o Job Shadowing.
+\item Prototipos.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Documentación de Requisitos: entre los componentes de la documentación de requisitos pueden incluirse:
+\begin{itemize}
+\item La necesidad comercial u oportunidad.
+\item Objetivos de la empresa y del proyecto.
+\item Requisitos funcionales que describen los procesos de la empresa, la información y la interacción con el producto.
+\item Requisitos no funcionales.
+\item Requisitos de calidad.
+\item Criterios de aceptación.
+\item Supuestos y restricciones.
+\end{itemize}
+\item Plan de Gestión de Requisitos: documenta la manera en que se analizarán, documentarán y gestionarán los requisitos a lo largo del proyecto.
+\item Matriz de Rastreabilidad de Requisitos: es una tabla que vincula los requisitos con su origen y los monitorea a lo largo del ciclo de vida del proyecto.
+\end{itemize}
+\subsection{Definir el Alcance} \label{sec:definir_alcance}
+\par Es el proceso que consiste en desarrollar una descripción detallada del proyecto y del producto. Durante el proceso de planificación, el alcance del proyecto se define y se describe de manera más específica conforme se va recabando mayor información acerca del proyecto.
+\paragraph{Entradas}
+\begin{itemize}
+\item Acta de Constitución del Proyecto (PC): proporciona una descripción del proyecto y las características del producto de alto nivel. Contiene además los requisitos de aprobación del proyecto.
+\item Documentación de Requisitos (ver \ref{sec:recopilar_requisitos})
+\item Activos de Procesos de la Organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto.
+\item Análisis del Producto: para proyectos cuyo entregable es un producto, a diferencia de un servicio o resultado, el análisis del producto puede constituir una herramienta eficaz. Cara área de aplicación cuenta con uno o varios métodos generalmente aceptados para traducir en entregables tangibles las descripciones de alto nivel del producto.
+\item Identificación de Alternativas: se emplea para generar diferentes enfoques para la ejecución y desarrollo del trabajo del proyecto. Puede utilizarse una variedad de técnicas de gestión, tales como la tormenta de ideas, el pensamiento lateral, la comparación entre pares, etc.
+\item Talleres Facilitadores (ver \ref{sec:recopilar_requisitos}).
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Declaración del Alcance del Proyecto: describe de manera detallada los entregables del proyecto y el trabajo necesarios para crear esos entregables. Esta declaración puede contener exclusiones explícitas del alcance. Permite al equipo del proyecto realizar una planificacion más detallada, sirve como guía del equipo de trabajo durante la ejecución y proporciona la línea base para evaluar si las solicitudes de cambio o de trabajo adicional se encuentran dentro o fuera de los límites del proyecto.
+\par Incluye, ya sea directamente o por referencia a otros documentos, lo siguiente:
+\begin{itemize}
+\item Una descripción del alcance del producto.
+\item Los criterios de aceptación del producto.
+\item Los entregables del proyecto.
+\item Las exclusiones del proyecto.
+\item Las restricciones del proyecto.
+\item Los supuestos del proyecto.
+\end{itemize}
+\item Actualizaciones a los documentos del Proyecto:
+\begin{itemize}
+\item Registro de interesados.
+\item Documento de requisitos.
+\item Matriz de rastreabilidad de requisitos.
+\end{itemize}
+\end{itemize}
+\subsection{Crear la EDT} \label{sec:crear_edt}
+\par Es el proceso que consiste en subdividir los entregables del proyecto y el trabajo del proyecto en componentes más pequeños y fáciles de manejar.
+\par La \emph{Estructura de Desgloce del Trabajo} (EDT) es una descomposición jerárquica, basada en los entregables del trabajo que debe ejecutar el equipo del proyecto para lograr los objetivos del proyecto y crear los entregables requeridos, con cada nivel descendente de la EDT representando una definición cada vez más detallada del trabajo del proyecto.
+\par La EDT organiza y define el alcance total del proyecto y representa el trabajo especificado en la declaración del alcance del proyecto aprobada y vigente.
+\par El trabajo planificado está contenido en el nivel más bajo de los componentes de la EDT, denominados paquetes de trabajo. Un paquete de trabajo puede ser programado, monitoreado, controlado, y su costo puede ser estimado. Muestra las relaciones "contenido en" y no muestra necesariamente otras dependencias.
+\paragraph{Entradas}
+\begin{itemize}
+\item Declaración del Alcance del Proyecto (ver \ref{sec:definir_alcance}).
+\item Documentación de Requisitos (ver \ref{sec:recopilar_requisitos}).
+\item Activos de los Procesos de la Organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Descomposición: es la subdivisión de los entregables del proyecto en componentes más pequeños y más manejables, hasta que el trabajo y los entregables queden definidos al nivel de paquetes de trabajo.
+\begin{itemize}
+\item Identificar y analizar los entregables y el trabajo relacionado.
+\item Estructurar y organizar la EDT.
+\item Descomponer los niveles superiores de la EDT en componentes detallados de nivel inferior.
+\item Desarrollar y asignar códigos de identificación a los componentes de la EDT.
+\item Verificar que el grado de descomposición del trabajo sea el necesario y el suficiente.
+\end{itemize}
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item EDT.
+\item Diccionario de la EDT: es un documento cuya función es respaldar la EDT. El diccionario de la DT proporciona una descripción más detallada de los componentes de la EDT:
+\begin{itemize}
+\item el identificador del código de cuentas.
+\item La descripción del trabajo.
+\item La organización responsable.
+\item Una lista de hitos del cronograma.
+\item Las actividades asociadas del cronograma.
+\item Los recursos necesarios.
+\item Los estimados de costo.
+\item Los requisitos de calidad.
+\item Los criterios de aceptación.
+\end{itemize}
+\item Línea Base del Alcance: es un componente del PP. Incluye:
+\begin{itemize}
+\item La declaración del alcance del proyecto (ver \ref{sec:definir_alcance}).
+\item La EDT.
+\item El diccionario de la EDT.
+\end{itemize}
+\item Actualizaciones a los documentos del proyecto.
+\end{itemize}
+\subsection{Verificar el Alcance} \label{sec:verificar_alcance}
+\par Consiste en formalizar la aceptación de los entregables del proyecto que se han completado.
+\par Incluye revisar los entregables con el cliente o el patrocinador para asegurarse de que se han completado satisfactoriamente y para obtener de ellos su aceptación formal.
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la Dirección del Proyecto (ver \ref{sec:desarrollar_pp}).
+\item Documentación de Requisitos (ver \ref{sec:recopilar_requisitos}).
+\item Matriz de Rastreabilidad de Requisitos (ver \ref{sec:recopilar_requisitos}).
+\item Entregables Validados.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Inspección: incluye actividades tales como medir, examinar y verificar para determinar si el trabajo y los entregables cumplen con los requisitos y los criterios de aceptación del producto. Las inspecciones se denominan también, según el caso, revisiones, revisiones del producto, auditorías y revisiones generales.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Entregables aceptados: los entregables que cumplen con los criterios de aceptación son formalmente firmados y aprobados por el cliente o el patrocinador.
+\item Solicitudes de Cambio: los entregables completados que no han sido aceptados formalmente se documentan junto con las razones por las cuales no fueron aceptados. Esos entregables pueden necesitar una solicitud de cambio para la reparación de defectos.
+\item Actualización a los Documentos del Proyecto.
+\end{itemize}
+\subsection{Controlar el Alcance} \label{sec:controlar_alcance}
+\par Es el procesos por el que se monitorea el estado del alcance del proyecto y del producto, y se gestionan cambios a la línea base del alcance.
+\par Asegura que todos los cambios solicitados o las acciones preventivas o correctivas recomendadas se procesen a través del proceso Realizar el Control Integrado de Cambios (ver \ref{sec:control_integrado}). También se utiliza para gestionar los cambios reales cuando suceden y se integra a los otros procesos de control.
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la Dirección del Proyecto:
+\begin{itemize}
+\item Linea base del alcance.
+\item Plan para la gestión del alcance del proyecto.
+\item Plan para la gestión de cambios.
+\item Plan de gestión de la configuración.
+\item Plan de gestión de requisitos.
+\end{itemize}
+\item Información sobre el Desempeño del trabajo.
+\item Documentación de requisitos.
+\item Matriz de rastreabilidad de requisitos.
+\item Activos de procesos de la organización.
+\end{itemize}
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Análisis de Variación: se utilizan para evaluar la magnitud de la variación respecto de la linea base original del alcance. Por ejemplo, análisis o método del valor ganado.
+\end{itemize}
+\paragraph{Salidas}
+\begin{itemize}
+\item Mediciones del Desempeño del trabajo.
+\item Actualizaciones a los activos de los procesos de la organización
+\item Solicitudes de cambio.
+\item Actualizaciones al PP.
+\item Actualizaciones a los documentos del proyecto.
+\end{itemize}
+
+\section{Gestión del Tiempo del Proyecto}
+
+\textbf{Objetivo:} completar el trabajo del proyecto puntualmente, es decir, en tiempo y forma.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+\rowcolor{Gray} Tiempo & & \ref{sec:definir_actividades} - \ref{sec:secuenciar_actividades} - \ref{sec:estimar_recursos_actividades} - \ref{sec:estimar_duracion_actividades} - \ref{sec:desarrollar_cronograma} & & \ref{sec:controlar_cronograma} & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+
+\subsection{Definir las Actividades} \label{sec:definir_actividades}
+Consiste en la identificación de las tareas necesarias para producir el producto, servicio o resultado del proyecto. Los paquetes de trabajo pueden ser desgranados en unidades menores, denominadas \emph{actividades}.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Línea base del Alcance: entregables, restricciones y supuestos del proyecto.
+\item Factores ambientales de la empresa: sistema de información de la gestión de proyectos (PMIS).
+\item Activos de los procesos de la organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Descomposición: consiste en subdividir los paquetes de trabajo del proyecto en componentes más pequeños y más fáciles de manejar, denominados actividades. Las actividades representan el esfuerzo necesario para completar un paquete de trabajo. Cada paquete de trabajo dentro de la EDT se descompone en las actividades necesarias para producir los entregables del paquete mismo.
+\item Planificación gradual: elaboración gradual, donde se planifica en detalle el trabajo que debe desarrollarse en el corto plazo y el trabajo futuro se planifica a un nivel superior de la EDT.
+\item Plantillas: lista de actividades estándar o un parte de una lista de un proyecto previo, pueden utlizarse como plantilla para un nuevo proyecto.
+\item Juicio experto.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Lista de Actividades.
+\item Atributos de las Actividades: agregan detalle a la actividad. Por ejemplo:
+\begin{itemize}
+\item Identificador de la actividad.
+\item Identificar de la EDT.
+\item Nombre de la actividad.
+\item Descripción de la actividad.
+\item Actividades predecesoras.
+\item Actividades sucesoras.
+\item Relaciones lógicas.
+\item Requisitos de recursos.
+\item Fechas impuestas.
+\item Restricciones y supuestos.
+\end{itemize}
+\item Lista de Hitos: identifica todos los hitos e indica si éstos son obligatorios, como los exigidos por contrato, u opcionales, como los basados en la información histórica.
+\end{itemize}
+
+\subsection{Secuencias las Actividades} \label{sec:secuenciar_actividades}
+Se trata de definir las dependencias entre las tareas. Identificar y definir las relaciones lógicas entre las actividades del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Lista de Actividades (ver \ref{sec:definir_actividades}).
+\item Atributos de las Actividades (ver \ref{sec:definir_actividades}).
+\item Lista de Hitos (ver \ref{sec:definir_actividades}).
+\item Declaración del Alcance del Proyecto (ver \ref{sec:definir_alcance}): contiene la descripción del alcance del producto, que incluye las características del producto que pueden afectar el establecimiento de las secuencia de las actividades.
+\item Activos de los Procesos de la Organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Método de Diagramación por Precedencia (PDM): es utilizado en el método de la ruta crítica (CPM) para crear un diagrama de red del cronograma del proyecto. Esta técnica también se denomina Actividad en el Nodo (AON).
+Tipos de relaciones de precedencia:
+\begin{itemize}
+\item Terminar para comenzar: B no puede empezar hasta que A termine.
+\item Empezar para empezar: B no puede empezar hasta que A empiece.
+\item Terminar para terminar: B no puede terminar hasta que A termine.
+\item Empezar para terminar: B no puede terminar hasta que A empiece.
+\end{itemize}
+\item Determinación del tipo de precedencia.
+\begin{itemize}
+\item Dependencias forzosas: dependencias duras y no evitables. Dictada por la naturaleza del trabajo o la disponibilidad.
+\item Discrecionales: Dependencias lógicas. Reflejan a menudo algún criterio de prioridades. Dictadas por el equipo, de acuerdo a su experiencia y conocimiento sobre el producto del proyecto o la metodología empleada.
+\item Externas: establecidas por actividades fuera del alcance del proyecto. No puede ser manejadas por el equipo de proyecto.
+\end{itemize}
+\item Aplicación de Adelantos y Retrasos: el equipo de dirección de proyecto determina las dependencias que pueden necesitar un adelanto o un retraso para definir con exactitud la relación lógica. Un adelanto permite una aceleración de la actividad sucesora. Un retraso ocasiona una demora en la actividad sucesora.
+\item Plantillas de Diagramas de Red: las plantillas de diagramas de red de proyectos anteriores pueden ser utilizadas en las fases tempranas del proyecto actual.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Diagramas de Red del Proyecto: muestras las actividades y las relaciones existentes entre ellas para el proyecto.
+\item Actualización de la documentación del proyecto: la lista de actividades y sus atributos, entre otros documentos, deberán actualizarse a medida que se avanza en el proyecto.
+\end{itemize}
+
+\subsection{Estimar los Recursos de las Actividades} \label{sec:estimar_recursos_actividades}
+Aquí se analizan y definen las cantidades de materiales y personas necesarias para cumplimentar las tareas del proyecto. Estimar el tipo y las cantidades de materiales, personas, equipos o suministros requeridos para ejecutar cada actividad.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Lista de Actividades (ver \ref{sec:definir_actividades}).
+\item Atributos de las Actividades (ver \ref{sec:definir_actividades}).
+\item Calendario de Recursos: especifican cuándo y por cuánto tiempo estarán disponibles los recursos identificados del proyecto durante la ejecución del mismo. Esta información p uede proporcionarse a nivel de la actividad o del proyecto.
+\item Factores ambientales de la empresa: disponibilidad y habilidades de los recursos.
+\item Activos de los Procesos de la Organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio Experto.
+\item Análisis de Alternativas: analizar caminos alternativos de realización.
+\item Datos de estimación publicados: muchas empresas publican periódicamente los índices de producción actualizados y los costos unitarios de los recursos para una gran variedad de industrias, materiales y equipos, en diferentes países y en diferentes ubicaciones geográficas.
+\item Estimación ascendente: el trabajo dentro de una actividad se descompone a un nivel mayor de detalle. Se estiman las necesidades de recursos y se suman.
+\item Software de gestión de proyectos: el software de gestión de proyectos tiene la capacidad de ayudar a planificar, organizar y gestionar los grupos de recursos, y de desarrollar estimados de los mismos.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Requisitos de Recursos de la Actividad: identifica los tipos y la cantidad de recursos necesarios para cada actividad de una paquete de trabajo. La documentación de los requisitos de recursos para cada actividad puede incluir la base de la estimación de cada recurso, así como los supuestos considerados.
+\item Estructura de Desglose de Recursos: estructura jerárquica de los recursos, identificados por categoría y tipo de recursos. Es útil para organizar y comunicar los datos del cronograma del proyecto, incluyendo la información sobre utilización de recursos.
+\item Actualizaciones a los Documentos del Proyecto:
+\begin{itemize}
+\item Lista de actividades.
+\item Atributos de las actividades.
+\item Calendarios de recursos.
+\end{itemize}
+\end{itemize}
+
+\subsection{Estimar la Duración de las Actividades} \label{sec:estimar_duracion_actividades}
+Se trata de establecer la cantidad de unidades de tiempo necesario para ejecutar las tareas con los recursos asignados.
+\par Requiere que se estime la cantidad de \textbf{esfuerzo} de trabajo requerido y la cantidad de recursos para completar la actividad, esto permite determinar la cantidad de períodos de trabajo (\textbf{duración de la actividad}) necesarios para completar la actividad. Se documentan todos los datos y supuestos que respaldan el estimado de la duración para cada estimado de duración de la actividad.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Lista de Actividades (ver \ref{sec:definir_actividades}).
+\item Atributos de las Actividades (ver \ref{sec:definir_actividades}).
+\item Requisitos de Recursos de la Actividad: los estimados de recursos de las actividades tendrán un efecto sobre la duración de las actividades.
+\item Calendarios de Recursos: puede abarcar el tipo de recursos humanos, su disponibilidad y su capacidad. Por ejemplo, cuando se asigna con dedicación completa a un miembro del personal junior y a uno senior, por lo general se espera que el miembro senior realice una actividad determinada en menos tiempo que el miembro junior.
+\item Declaración del Alcance del Proyecto (ver \ref{sec:recopilar_requisitos}): restricciones y supuestos que se tienen en cuenta al estimar la duración de las actividades. Ejemplos:
+\begin{itemize}
+\item Supuestos
+\begin{itemize}
+\item las condiciones existentes.
+\item la disponibilidad de información.
+\item la frecuencia de los períodos de presentación de informes.
+\end{itemize}
+\item Restricciones
+\begin{itemize}
+\item la disponibilidad de recursos capacitados.
+\end{itemize}
+\end{itemize}
+\item Factores ambientales de la empresa.
+\item Activos de los procesos de la organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Juicio experto.
+\item Estimación análoga: utiliza parámetros de una proyecto anterior similar, tales como la duración, el presupuesto, el tamaño, la carga y la complejidad, como base para estimar los mismos parámetros o medidas para un proyecto futuro.
+\begin{itemize}
+\item Ventajas: Menos costosa, más rápida.
+\item Desventajas: Poco precisa, depende de la similitud de la información histórica disponible.
+\end{itemize}
+\item Estimación paramétrica: utiliza una relación estadística entre los datos históricos y otras \textbf{variables} para calcular una estimación de parámetros de una actividad tales como costo, presupuesto y duración. Con esta técnica pueden lograrse niveles más altos de exactitud, dependiendo de la sofisticación y de los datos que utilice el modelo. Puede aplicarse a todo un proyecto o a partes del mismo, en conjunto con otros métodos de estimación.
+\par En general se parte de la hipótesis que el esfuerzo es proporcional a la complejidad y la complejidad es proporcional al tamaño, por lo tanto, el esfuerzo es proporcional al tamaño. Es decir, si tengo el tamaño tengo el esfuerzo.
+\begin{itemize}
+\item Duración: cuantitativamente multiplicando la cantidad de trabajo por realizar por la cantidad de horas de trabajo por unidad de trabajo.
+\end{itemize}
+\item Estimación paramétrica - ejemplos:
+\begin{itemize}
+\item Lineas de código (LOC).
+\item Function points.
+\item Número de objetos.
+\item Número de burbujas en un DFD.
+\end{itemize}
+\item Estimación de tres valores: se intenta mejorar la precisión de la estimación, ya que este procedimiento considera la incertidumbre y el riesgo que están implícitos en cualquier estimación. Este método es llamado PERT (Program Evaluation and Review Technique) y se calcula en base a las variables de estimación de la duración optimista, más probable y pesimista.
+\begin{center}
+\begin{tabular}{ccc}
+PERT: ${O+4M+P}\over 6$ & Desvio: ${P-O} \over 6$ & Varianza: ${\left({P-O} \over 6 \right)}^2$
+\end{tabular}
+\end{center}
+\item Análisis de reservas: los estimados de la duración pueden incluir reservas para contingencias (denominadas a veces reservas de tiempo o \emph{colchones}) en el cronograma global del proyecto, para tener en cuenta la incertidumbre del cronograma.
+\par Las reservas para contingencia puede ser un porcentaje de la duración estimada de la actividad, una cantidad fija de períodos de trabajo, o puede calcularse utilizando métodos de análisis cuantitativos. A medida que se dispone de información más precisa sobre el proyecto, la reserva para contingencias puede usarse, reducirse o eliminarse. Debe identificarse claramente esta contingencia en la documentación del cronograma.
+\par Las \emph{reservas para contingencias} son asignaciones para cambios no planificados, pero potencialmente necesarios, que pueden resultar de riesgos identificados en el registro de riesgos. Las \emph{reservas de gestión} son presupuestos reservados para cambios no planificados al alcance y al costo del proyecto.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Estimados de la duración de la actividad: son valoraciones cuantitativas de la cantidad probable de períodos de trabajo que se necesitarán para completar una actividad. Por ejemplo, 15\% de probabilidad de exceder las tres semanas, para indicar una alta probabilidad (85\%) de que la actividad dure tres semanas o menos.
+\item Actualización a los documentos del proyecto:
+\begin{itemize}
+\item Atributos de las actividades.
+\item Los supuestos hechos durante el desarrollo del estimado de la duración de las actividades, como los niveles de habilidad y disponibilidad.
+\end{itemize}
+\end{itemize}
+\subsection{Desarrollar el Cronograma} \label{sec:desarrollar_cronograma}
+En este proceso se trabaja en la evaluación de las actividades, las secuencias y los recursos asignados que, junto a las restricciones del calendario, conformarán el cronograma del proyecto. La incorporación de las actividades, duraciones y recursos a la herramienta de planificación genera un cronograma con fechas planificadas para completar las actividades del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Lista de actividades.
+\item Atributos de las actividades.
+\item Diagramas de red.
+\item Requisitos de recursos para las actividades.
+\item Calendario de los recursos
+\item Estimación de la duración de las actividades.
+\item Enunciado del alcance del proyecto.
+\item Factores ambientales de la empresa.
+\item Activos y procesos organizacionales.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Análisis de la red del cronograma: El análisis de la red del cronograma es una técnica utilizada para generar el cronograma del proyecto. Emplea diversas técnicas analíticas, tales como el método de la ruta crítica y el método de la cadena crítica para calcular las fechas de inicio y finalización tempranas y tardías para las partes no completadas de las actividades del proyecto.
+\item Método del camino crítico o ruta crítica: calcula las \emph{fechas tempranas y tardías de comienzo y finalización de las actividades del cronograma}. El resultado de la aplicación del método no determina necesariamente las fechas definitivas del cronograma, sino que muestra los períodos en los cuales las actividades podrían ser ejecutadas.
+\par Denominación:
+\begin{itemize}
+\item Early Start (ES): es la fecha más pronta para comenzar una actividad.
+\item Early Finish (EF): es la fecha más probable para terminar una actividad.
+\item Late Start (LS): es la fecha más tardía para comenzar una actividad.
+\item Late Finish (LF): es la fecha más tardía para terminar una actividad.
+\end{itemize}
+\item Método del camino crítico - Las holguras: la holgura es la \emph{cantidad de tiempo que puede retrasar una actividad sin afectar el proyecto}.
+\begin{itemize}
+\item Las tareas del camino crítico tienen holgura cero.
+\item La holgura negativa indica que hay retraso.
+\item Cálculo de la holgura $LS-ES$ o $LF-EF$.
+\item Holgura libre: la cantidad de tiempo que una tarea puede demorarse sin retrasar la fecha temprana de su sucesora.
+\item Holgura total: la cantidad de tiempo que una tarea puede demorarse sin retrasar la fecha de finalización del proyecto.
+\end{itemize}
+\item Método de la cadena crítica: técnica de análisis de la red del cronograma que permite modificar el cronograma del proyecto para adaptarlo a recursos limitados.
+\begin{itemize}
+\item Agrega colchones de duración, que son actividades del cronograma que no requieren trabajo y que se utilizan para manejar la incertidumbre\footnote{Falta de conocimiento seguro o fiable sobre una cosa, especialmente cuando crea inquietud en alguien. Ausencia de información o conocimiento respecto a una acción, decisión o evento.}.
+\item Un colchón que se coloca al final de la cadena crítica se conoce como colchón del proyecto, y protege la fecha de finalización objetivo contra cualquier retraso a lo largo de la cadena crítica.
+\item Se colocan colchones adicionales, en cada punto donde una cadena de tareas dependientes, que está fuera de la cadena crítica, la alimenta. De esta modo, los colchones de alimentación protegen la cadena crítica contra retrasos a lo largo de las cadenas de alimentación.
+\end{itemize}
+\item Nivelación de recursos: esta técnica de análisis de diagramas de red se utiliza para balancear el esfuerzo de los recursos asignados a las tareas. Básicamente, la aplicación de este procedimiento hace que el trabajo a realizar por los recursos se distribuya uniformemente durante la duración del proyecto, evitando picos y valles de esfuerzo.
+\item Aplicación de adelantos y retrasos: son refinamientos que se aplican durante el análisis de la red para desarrollar un cronograma viable.
+\item Compresión del cronograma: apunta a reducir el cronograma del proyecto sin cambiar si alcance.
+\begin{itemize}
+\item Intensificación (crashing): aquí se busca agregar recursos a una actividad para que ésta se ejecute en menos tiempo (mayor costo).
+\item Ejecución rápida (fast tracking): mediante esta técnica se busca ejecutar en forma paralela ciertas actividades que normalmente se ejecutarían de manera secuencial (mayor riesgo).
+\end{itemize}
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Cronograma del proyecto: Debe incluir fechas de inicio y fin para cada una de sus actividades.
+\begin{itemize}
+\item Diagrama de barras (Gantt): cada barra representa una actividad y muestra tanto su fecha de inicio y de fin como su duración.
+\item Diagrama de hitos: presenta la fecha de ocurrencia de los hitos más significativos del cronograma.
+\item Diagrama de red: se utiliza para mostrar el camino crítico y cómo están lógicamente relacionadas las tareas del cronograma.
+\end{itemize}
+\item Línea base del cronograma: versión específica del cronograma del proyecto. El equipo de dirección del proyecto la acpeta y aprueba como la línea base del cronograma, con fechas de inicio y fechas de finalización.
+\item Datos del cronograma
+\begin{itemize}
+\item Hitos del cronograma.
+\item Actividades del cronograma.
+\item Atributos de las actividades.
+\item Documentación de todos los supuestos y restricciones.
+\item Requisitos de recursos por período de tiempo.
+\item Planificación de las reservas para contingencia.
+\end{itemize}
+\item Actualizaciones a los documentos del proyecto.
+\end{itemize}
+
+\subsection{Controlar el Cronograma} \label{sec:controlar_cronograma}
+Mediante este proceso se controla el avance del proyecto, se actualiza su estado y se gestionan los cambios en la línea base.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan de gestión del proyecto: contiene el plan de gestión del cronograma y su línea base.
+\item Cronograma del proyecto.
+\item Información sobre el rendimiento: es la información relacionada con el avance del proyecto, que incluye el detalle de las actividades que han sido comenzadas, las que están en ejecución y las que han sido completadas.
+\item Activos y procesos de la organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Revisión del desempeño: permiten medir, comparar y analizar el desempeño del cronograma, en aspectos como las fechas reales de inicio y finalización, el porcentaje completado y la duración restante para el trabajo en ejecución.
+\item Análisis de variación: las mediciones de la variación del cronograma se utilizan para evaluar la magnitud del desvío del cronograma original.
+\item Software de gestión de proyectos.
+\item Nivelación de recursos.
+\item Ajuste de adelantos y retrasos.
+\item Compresión del cronograma.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Mediciones del desempeño del trabajo: los valores calculados de la variación del cronograma (SV) y del índice de desempeño del cronograma (SPI) para los componentes de la EDT, en particular los paquetes de trabajo, se documentan y comunican a los interesados.
+\item Actualizaciones a los activos de los procesos.
+\begin{itemize}
+\item Causas de las variaciones.
+\item Acciones correctivas seleccionadas y la razón de su selección.
+\item Lecciones aprendidas.
+\end{itemize}
+\item Solicitudes de cambio: a la línea base del cronograma y/o a otros componentes del PP.
+\item Actualizaciones de los planes del proyecto:el cronograma, el diagrama de red, la lista de hitos, los atributos de las actividades, los supuestos y restricciones, los requerimientos de recursos, los cronogramas alternativos y las reservas, deberán ser actualizadas para reflejar los cambios aprobados ocurridos.
+\end{itemize}
+
+\section{Gestión del Costo del Proyecto}
+Incluye los procesos involucrados en estimar, presupuestar y controlar los costos de modo que se complete el proyecto dentro del presupuesto aprobado. El plan de gestión de costos de un proyecto debe incluir:
+\begin{itemize}
+\item Como se gestionará el proyecto según su presupuesto.
+\item El nivel de precisión de las estimaciones de costos.
+\item Los enlaces de cada grupo de costos con las cuentas de control de la EDT.
+\item Los límites permitidos de variaciones en los costos.
+\item Cómo se administrarán las variaciones de costos.
+\item Cómo y cuando realizar análisis de valor.
+\item Qué procesos de gestión de costos se utilizarán.
+\item Cómo es el ciclo de vida de los costos.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+\rowcolor{Gray} Costo & & \ref{sec:estimar_costos} - \ref{sec:determinar_presupuesto} & & \ref{sec:controlar_costos} & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+\subsection{Estimar los Costos} \label{sec:estimar_costos}
+Calcular los costos de cada recurso para completar las actividades del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Linea base del alcance.
+\begin{itemize}
+\item Declaración del alcance del proyecto (ver \ref{sec:definir_alcance}).
+\item EDT (ver \ref{sec:crear_edt}).
+\item Diccionario de la EDT (ver \ref{sec:crear_edt}). 
+\end{itemize}
+\item Planes.
+\begin{itemize}
+\item Cronograma.
+\item Recursos humanos.
+\item Riesgos.
+\end{itemize}
+\par Al momento de estimar los costos, no debemos considerar los costos relacionados con procesos de calidad y gestión de riesgos, tiempo del director de proyecto, capacitación del equipo de trabajo y gastos de oficina y de la PMO.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Estimación análoga: utiliza costos de proyectos anteriores para estimar los costos del próximo proyecto (ver \ref{sec:estimar_duracion_actividades}).
+\begin{itemize}
+\item Ventajas: rápido, barato, no hace falta detalle de actividades.
+\item Desventajas: poco preciso, poca información del proyecto, supone todos los proyecto iguales.
+\end{itemize}
+\item Estimación ascendente: descomponer la actividad en componentes menores para estimar con mejor precisión cada una de las partes inferiores y luego sumar los costos de abajo hacia arriba.
+\begin{itemize}
+\item Ventajas: más preciso, compromete a los miembros del equipo porque participan de las estimaciones, provee las bases para el monitoreo y control.
+\item Desventajas: más lento y costoso, tendencia a utilizar estimaciones sin fundamento cuando no se conocen bien las actividades, requiere bastante información del proyecto para su implementación.
+\end{itemize}
+\item Método de los dígitos oscilantes (MDO).
+\item Estimación paramétrica: utiliza información histórica para estimar los costos futuros. Pueden utilizarse modelos simples, como por ejemplo estimar los costos de construcción en base a valores históricos del costos por $m^2$ construido, o modelos econométricos más complejos, donde el costos de la construcción depende de varias variables tales como los $m^2$, la localización, el clima, etc.
+\item Determinar tarifas de los recursos: solicitar cotizaciones, consultar bases de datos y listas de precios publicadas.
+\item Estimación PERT (ver \ref{sec:estimar_duracion_actividades}).
+\item Análisis de reservas: agregar una reserva de costo adicional para contingencia sobre aquellos eventos previstos pero inciertos. En otras palabras, agregar una reserva sobre aquellas incógnitas conocidas que tienen riesgos residuales.
+\item Costo de la calidad (COQ): costos para asegurar la calidad del proyecto. Incluye los costos de prevención y evaluación (costos de cumplimiento) y los costos de falla (costos de no cumplimiento).
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Estimación de costos de las actividades: recursos humanos, materiales, equipamiento, servicios, instalaciones, reserva para contingencia, ajustes inflacionarios, etc.
+\item Base de las estimaciones: información de respaldo de las estimaciones. Documentos que justifican cómo se realizaron las estimaciones de costos, justificación de los supuestos utilizados, especificaciones del rango de precisión, etc.
+\end{itemize}
+
+\subsection{Determinar el Presupuesto} \label{sec:determinar_presupuesto}
+Sumar los costos de todas las actividades del proyecto a través del tiempo.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Linea base del alcance.
+\begin{itemize}
+\item Declaración del alcance del proyecto (ver \ref{sec:definir_alcance}).
+\item EDT (ver \ref{sec:crear_edt}).
+\item Diccionario de la EDT (ver \ref{sec:crear_edt}). 
+\end{itemize}
+\item Estimaciones de costos de las actividades (ver \ref{sec:estimar_costos}).
+\item Base de las estimaciones (ver \ref{sec:estimar_costos}).
+\item Cronograma y disponibilidad de recursos.
+\item Contratos.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Suma de costos: sumar los costos de las actividades del proyecto distribuidas a través del tiempo.
+\item Análisis de reservas: agregar una reserva de gestión de costos para aquellos cambios no planificados por riesgos imprevistos (ver \ref{sec:estimar_duracion_actividades}).
+\item Estimación análoga o paramétrica: utiliza información histórica para estimar presupuestos futuros (ver \ref{sec:estimar_duracion_actividades}).
+\end{itemize}
+
+\paragraph{Salidas}
+
+\begin{itemize}
+\item Línea base del desempeño de costos: está formado por el presupuesto acumulado del proyecto. Es un presupuesto hasta la conclusión (BAC) aprobado y distribuido en el tiempo, que se utiliza para medir, monitorear y controlar el desempeño global del costo del proyecto.
+\item Requisitos de financiamiento: necesidades de fondos para financiar el proyecto a través del tiempo.
+\end{itemize}
+
+
+\subsection{Controlar los Costos} \label{sec:controlar_costos}
+Influir sobre las variaciones de costos y administrar los cambios del presupuesto.
+Durante el procesos de controlar los costos del proyecto se llevan a cabo acciones tales como:
+\begin{itemize}
+\item Gestionar e influir sobre los cambios.
+\item Seguir periódicamente los avances de costos del proyecto.
+\item Verificar que los desembolsos no excedan la financiación autorizada.
+\item Asegurar la utilización del control integrado de cambios.
+\item Informar los cambios aprobados a los interesados en tiempo y forma.
+\end{itemize}
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Linea base de desempeño de costos (ver \ref{sec:determinar_presupuesto}).
+\item Requisitos de financiamiento (ver \ref{sec:determinar_presupuesto}).
+\item Informes de desempeño del trabajo (ver \ref{sec:gestionar_ejecucion_proyecto}).
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Gestión del valor ganado (EVM): evaluar el estado de alcance del proyecto en relación a su línea base para analizar el avance de los costos y tiempos del proyecto.
+\item Proyecciones: re-estimar en forma periódica cuál será el costo estimado a la finalización del proyecto.
+\item Índice de desempeño del trabajo por completar: estimar cuanto debo ajustar los desembolsos de costos para cumplir con el presupuesto aprobado.
+\item Revisión del desempeño y análisis de variación: comparar el desempeño real del proyecto con su línea bas de costo y cronograma.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Medición del desempeño del trabajo: cuál es el estado de avance y desvíos del proyecto en relación a su línea base.
+\item Proyecciones del presupuesto: cuál es el costo estimado a la finalización del proyecto.
+\item Solicitudes de cambio y actualizaciones.
+\end{itemize}
+
+
+\section{Gestión de la Calidad del Proyecto}
+La gestión de la calidad implica que el proyecto satisfaga las necesidades por las cuales se emprendió. Para ello, será necesario lo siguiente:
+\begin{itemize}
+\item Convertir las necesidades y expectativas de los interesados en requisitos del proyecto.
+\item Lograr la satisfacción del cliente cuando el proyecto produzca lo planificado y el producto cubra las necesidades reales.
+\item Realizar acciones de prevención sobre la inspección.
+\item Buscar en forma permanente la perfección: mejora continua.
+\end{itemize}
+\par En todo proyecto es sumamente importante dedicar tiempo a la gestión de calidad para prevenir errores y defectos, evitar realizar de nuevo el trabajo, lo que implica ahorrar tiempo y dinero, y tener un cliente satisfecho.
+
+\paragraph{¿Qué es la calidad?} Según la American Society for Quality, la calidad es \emph{el grado en el que un proyecto cumple con los requisitos}. Para el Dr. Kaoru Ishikawa, la calidad implica \emph{diseñar, producir y mantener un producto que sea el más económico, el más útil y siempre satisfactorio para el consumidor}.
+
+\paragraph{Teóricos de la calidad}
+\begin{itemize}
+\item Edwards Deming: uno de los pioneros en temas relacionados con la calidad. Sus conceptos más conocidos son la reacción en cadena, los catorce pasos para la calidad total y el ciclo de mejora continua \emph{plan-do-check-act}.
+\item Joseph Moses Juran: es reconocido principalmente por la trilogía de la calidad (planificar, controlar y mejorar la calidad), hizo popular el principio de Paretto 80-20, y sostenía que hay que involucrar a la alta gerencia en la gestión de calidad. La calidad se cumple cuando un producto es \emph{adecuado para su uso}.
+\item Kaoru Ishikawa: se concentró en las teorías estadísticas para el control de calidad y es reconocido por las 7 herramientas básicas de la calidad:
+\begin{itemize}
+\item Diagrama causa-efecto: qué causa problemas.
+\item Diagramas de control: contro de variaciones.
+\item Diagramas de flujo: lo que se hace.
+\item Histogramas: visión gráfica de las variaciones.
+\item Diagrama de Paretto: ranking de problemas.
+\item Diagrama de comportamiento: historial.
+\item Diagrama de dispersión: relación entre variables.
+\end{itemize}
+\item Phillip Crosby: fue un convencido de que la calidad debe ser comprendida por todos. La calidad se define como \emph{conformidad con los requerimientos}. El sistema para administrar la calidad requiere de la prevención en lugar de la inspección. Hay que definir estándares de desempeño que no dejan dudas, por ejemplo, cero defectos.
+\end{itemize}
+
+\paragraph{Compatibilidad PMBOK con teorías de calidad}
+\begin{itemize}
+\item Deming, Juran, Ishikawa, Crosby.
+\item ISO (Organization for Standarization).
+\item TQM (Total Quality Management).
+\item Six Sigma.
+\item Costo de la calidad (COQ).
+\item Revisiones del diseño.
+\item Mejora continua.
+\end{itemize}
+
+\par Para gestionar la calidad el DP debe recomendar mejoras en los procesos y políticas de calidad de la empresa, establecer métricas para medir la calidad, revisar la calidad antes de finalizar el entregable, evaluar el impacto en la calidad cada vez que se cambia la triple restricción, destinar tiempo para realizar mejoras de calidad y asegurar que se utilice el control integrado de cambios, entre otras.
+\par La calidad \textbf{no} se incorpora al proyecto cuando se encuentra en marcha mediante procesos de inspección. Por el contrario, la calidad de planifica, se diseña y se incorpora antes de que comience la ejecución del proyecto. Al momento de planificar la calidad es importante identificar las normas de calidad relevantes, y como se van a satisfacer.
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+\rowcolor{Gray} Calidad & & \ref{sec:planificar_calidad} & \ref{sec:asegurar_calidad} & \ref{sec:controlar_calidad} & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+\subsection{Planificar la Calidad} \label{sec:planificar_calidad}
+Es el proceso por el cual se identifican los requisitos de calidad y/o normas para el proyecto y el producto, documentando la manera en que el proyecto demostrará el cumplimiento con los mismos.
+\paragraph{Entradas}
+\begin{itemize}
+\item Lineas base:
+\begin{itemize}
+\item Alcance.
+\item Cronograma.
+\item Costos.
+\end{itemize}
+\par La definición de criterios de aceptación puede incrementar o disminuir significativamente los costos de calidad del proyecto.
+\item Registro de interesados.
+\item Registro de riesgos.
+\item Activos de los procesos de la organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+
+\begin{itemize}
+\item Análisis Costo-Beneficio: los principales beneficios de cumplir con los requisitos de calidad pueden incluir un menor reproceso, una mayor productividad, menores costos y una mayor satisfacción de los interesados.
+\item Costo de la Calidad (COQ): el costo de la calidad no es el costo en el que se incurre por crear un producto o servicio de calidad, sino que es el costo por no haber creado un producto o servicio de calidad. Cada vez que se debe rehacer parte del trabajo ya realizado, el costo de la calidad incrementa.
+\begin{itemize}
+\item Costo de conformidad: es el costo total por asegurar que el producto sea de buena calidad. Incluye costos de aseguramiento de calidad con actividades de estandarización, entrenamiento y procesos, y costos de control de calidad con actividades de revisión, auditorías, inspecciones y testing. El costo de conformidad representa la invesión de la organización en la calidad de sus productos.
+\item Costos de no conformidad: representa el costo total para la organización por no haber desarrollado un producto de buena calidad. Incluye los costos generados por fallas en la calidad, particularmente el costos de reprocesos, y costos una vez finalizado el proyecto, como perdida de negocios y compensaciones legales.
+\end{itemize}
+\item Diagrama de control: se utiliza para determinar si un proceso es estable o no, o si tiene un desempeño predecible. Reflejan los valores máximos y mínimos permisibles. El DP y los interesados apropiados establecen los límites de control superior e inferior, para reflejar los puntos en los cuales deben implementarse acciones correctivas para evitar que se sobrepasen los límites de las especificaciones.
+\item Estudios comparativos: los estudios comparativos implican comparar prácticas reales o planificadas del proyecto con las de proyectos comparables, para identificar las mejores prácticas, generar ideas de mejoras y proporcionar una base para la medición del desempeño.
+\item Diseño de experimentos (DOE): evaluar estadísticamente que factores mejoran la calidad del proyecto. Cambiar un factor por vez para analizar el impacto sobre la calidad del proyecto podría ser ineficiente. Con modelos estadísticos se pueden cambiar todos los factores de un proceso en forma simultánea y evaluar que combinación de factores tiene el mayor impacto en la calidad, a un costo razonable.
+\item Muestreo estadístico: seleccionar parte de una población para su análisis, de esa forma se reducen los costos de control de calidad en relación a tener que investigar toda la población.
+\item Diagramas de flujo: utiliza símbolos para describir los pasos de un proceso y las acciones que se deben realizar en cada paso.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Plan de gestión de calidad.
+\item Métrica de calidad: parámetros objetivos que se utilizarán para medir la calidad del proyecto.
+\item Listas de control de calidad: listados para verificar que se sigan los procesos de calidad.
+\item Plan de mejoras del proceso: el plan de mejoras del proceso es un plan subsidiario del plan para la dirección del proyecto. El plan de mejoras del proceso detalla los pasos para analizar los procesos que facilitarán la identificación de actividades que incrementan su valor.
+
+\end{itemize}
+
+\subsection{Asegurar la Calidad} \label{sec:asegurar_calidad}
+Una vez que el proyecto se encuentra en ejecución, con el asegurar la calidad se verifica que se estén implementando todos los procesos y normas definidas en el plan de calidad. Es el proceso que consiste en auditar los requisitos de calidad y los resultados obtenidos a partir de medidas de control de calidad, a fin de garantiza que se utilicen definiciones operacionales y normas de calidad adecuadas.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan de gestión de calidad (ver \ref{sec:planificar_calidad}).
+\item Plan de mejoras del proceso (ver \ref{sec:planificar_calidad}).
+\item Métricas de calidad (ver \ref{sec:planificar_calidad}).
+\item Informes de desempeño del trabajo.
+\item Mediciones de control de calidad.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Auditorías de calidad: las auditorías de calidad las lleva a cabo el \emph{departamento de aseguramiento de calidad}, en caso que este departamento no exista, las debe realizar el DP. Con estas auditorías se busca responden las preguntas ¿se están aplicando las políticas y normas de calidad? ¿son efectivos y eficientes los procesos actuales?.
+\item Análisis del proceso: cuando el proyecto tiene procesos repetibles se hacen revisiones periódicas a los fines de seguir un proceso de mejora continua. El análisis de procesos sigue los pasos descritos en el plan de mejoras del procesos (ver \ref{sec:planificar_calidad}) para determinar las mejoras necesarias.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Solicitudes de cambio: la mejora de la calidad incluye llevar a cabo acciones para aumentar la efectividad y/o eficacia de las políticas, los procesos y los procedimientos de la organización ejecutante. Las solicitudes de cambio pueden utilizarse para realizar acciones correctivas o preventivas, o para proceder a la reparación de defectos.
+\item Actualizaciones al plan para la dirección del proyecto.
+\begin{itemize}
+\item Plan de gestión de calidad.
+\item Plan de gestión del cronograma.
+\item Plan de gestión de costos.
+\end{itemize}
+\end{itemize}
+
+\subsection{Controlar la Calidad} \label{sec:controlar_calidad}
+Este proceso verifica que los entregables se encuentren dentro de los límites de calidad definidos en el plan de gestión de calidad (ver \ref{sec:planificar_calidad})).
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan de gestión de calidad (ver \ref{sec:planificar_calidad}).
+\item Métricas de calidad (ver \ref{sec:planificar_calidad}).
+\item Listas de control de calidad (ver \ref{sec:planificar_calidad}).
+\item Entregables (ver \ref{sec:gestionar_ejecucion_proyecto}).
+\item Mediciones del desempeño del trabajo: se utilizan para establecer las métricas de actividad del proyecto, a fin de evaluar el avance real con respecto al avance planificado.
+\item Solicitudes de cambio aprobadas.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Diagrama Causa-Efecto (Ishikawa o espina de pescado): identifica de forma esquemática las causas de los problemas.
+\item Diagramas de control.
+\item Diagramas de flujo.
+\item Histograma: se representa gráficamente la distribución de frecuencias agrupadas en distintas clases o categorías.
+\item Diagramas de Paretto: se representa la distribución de frecuencias en un histograma con las causas de las fallas del producto. Ley de Paretto o principio 80-20: El 80\% de los problemas se debe al 20\% de las causas.
+\item Diagramas de comportamiento: se utiliza información histórica para estudiar la evolución de una variable a través del tiempo. Este diagrama puede mostrar tendencias, variaciones o cambios en procesos a través del tiempo.
+\item Diagramas de dispersión: muestra la relación entre dos variables. Mientras más próximos estén los datos sobre una diagonal, mayor será la correlación entre las variables.
+\item Muestreo estadístico: seleccionar parte de una población para su análisis (ver \ref{sec:planificar_calidad}).
+\item Inspección: se realizan revisiones o auditorías a un producto para evaluar si está cumpliendo con las normas para validar la reparación de defectos.
+\item Revisiones de solicitudes de cambio aprobadas: verificar que se implementaron los cambios de la misma forma que habían sido aprobados.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Mediciones de control de calidad.
+\item Cambios y entregables validados.
+\item Solicitudes de cambio.
+\item Actualizaciones.
+\end{itemize}
+
+\section{Gestión de los Riesgos del Proyecto}
+Encontrar, analizar y dar respuesta a los riesgos del proyecto. Incluye los procesos relacionados con llevar a cabo la planificación de la gestión, la identificación, el análisis, la planificación de respuesta a los riesgos, así como su monitoreo y control en un proyecto. Los objetivos de la Gestión de Riesgos del Proyecto son aumentar la probabilidad y el impacto de los evento positivos, y disminuir la probabilidad y el impacto de eventos negativos para el proyecto.
+\paragraph{Riesgo:} Evento que afecta el objetivo del proyecto. Algo desconocido que, si se produce, afecta en forma negativa o positiva los objetivos del proyecto. Por lo tanto, un evento riesgoso puede ser algo bueno o algo malo. El riesgo representa el impacto potencial de todas las amenazas u oportunidades que podrían afectar los logros de los objetivos del proyecto.
+\paragraph{Incertidumbre:} se da cuando no conocemos la probabilidad de ocurrencia de un evento.
+\paragraph{Probabilidad de ocurrencia:} cada evento riesgoso tiene alguna chance de suceder. Se representa en escala del $0$ al $1$.
+\paragraph{Impacto:} el riesgo no se cuantifica sólo por su probabilidad de ocurrencia, sino también por su impacto sobre los objetivos del proyecto (alcance, tiempo, costo, calidad).
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+RRHH & & 1 & 3 & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+\rowcolor{Gray} Riesgos & & \ref{sec:planificar_riesgos} - \ref{sec:identificar_riesgos} - \ref{sec:analisis_cualitativo} - \ref{sec:analisis_cuantitativo} - \ref{sec:planificar_respuesta_riesgos} & & \ref{sec:controlar_riesgos} & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+\subsection{Planificar la gestión de riesgos} \label{sec:planificar_riesgos}
+Evalúa y documenta como se gestionarán los riesgos del proyecto. Define como se planificarán y ejecutarán las actividades de identificación, análisis, respuesta y monitoreo de los riesgos.
+Durante el proceso de planificar los riesgos deberíamos dar respuesta a los siguientes interrogantes:
+\begin{itemize}
+\item ¿Quiénes van a identificar los riesgos?
+\item ¿Cuándo se llevará a cabo la identificación de los riesgos?
+\item ¿Qué escala se utilizará para el análisis cualitativo de los riesgos?
+\item ¿Cómo se priorizarán los riesgos?
+\item ¿Qué herramientas se utilizarán para el análisis cuantitativo?
+\item ¿Cuáles serán las estrategias a implementar para cada riesgo?
+\item ¿Con qué frecuencia se realizará el seguimiento de riesgos?
+\end{itemize}
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Enunciado del alcance del proyecto.
+\item Plan de gestión de costos.
+\item Plan de gestión del cronograma.
+\item Plan de gestión de las comunicaciones.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Reuniones de planificación y análisis: en estas reuniones se definen los planes a alto nivel para efectuar las actividades de gestión de riesgos. Se asignarán las responsabilidades de
+gestión de riesgos. Se adaptarán para su uso en el proyecto específico las plantillas generales de la organización para las categorías de riesgo y las definiciones de términos, tales como los niveles de riesgo, la probabilidad por tipo de riesgo, el impacto por tipo de objetivo y la matriz de probabilidad e impacto. Si no existen plantillas para otras etapas del proceso, podrán generarse durante estas reuniones.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Plan de gestión de riesgos: describe la manera en que se estructurará y se realizará la gestion de riesgos del proyecto. Incluye:
+\begin{itemize}
+\item Metodología: métodos, herramientas y fuentes de datos que pueden utilizarse para llevar a cabo la gestión de riesgos del proyecto.
+\item Roles y responsabilidades: define al lider, el apoyo y a los miembros del equipo de gestión de riesgos para cada tipo de actividad del plan de gestión de riesgos, y explica sus responsabilidades.
+\item Presupuesto: asigna recursos, estima los fondos necesarios para la gestión de riegos, a fin de incluirlos en la línea base del desempeño de costos.
+\item Calendario: define cuándo y con qué frecuencia se realizará el proceso de gestión de riesgos a lo largo del ciclo de vida del proyecto.
+\item Categorías de riesgos: proporciona una estructura que asegura un proceso completo de identificación sistemática de los riesgos con un nivel de detalle coherente, un contribuye a la efectividad y calidad del proceso identificar riesgos (ver \ref{sec:identificar_riesgos}).
+\item Definiciones de la probabilidad e impacto de los riesgos: la calidad y la credibilidad del proceso realizar análisis cualitativo de riesgos (ver \ref{sec:analisis_cualitativo}) requiere que se definan distintos niveles de probabilidad e impacto de los riesgos.
+\item Matriz de probabilidad e impacto: los riesgos se clasifican por orden de prioridad de acuerdo con sus implicaciones potenciales de tener un efecto sobre los objetivos del proyecto. El método típico para priorizar los riesgos consiste en utilizar una tabla de búsqueda o una matriz de probabilidad e impacto.
+\end{itemize}
+\end{itemize}
+
+\subsection{Identificar los riesgos} \label{sec:identificar_riesgos}
+Identifica todos los eventos que pueden afectar los objetivos del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan de gestión de riesgos.
+\item Estimaciones de los costos de las actividades.
+\item Estumaciones de la duración de las actividades.
+\item Linea base del alcance.
+\item Registro de interesados.
+\item Plan de gestión de costos.
+\item Plan de gestión del cronograma.
+\item Plan de gestión de calidad.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Revisión de la documentación.
+\item Técnicas de recopilación de información: Brainstorming, entrevistas, análisis causa-efecto, técnica Delphi.
+\paragraph{Técnica Delphi:} se separa físicamente a los miembros del grupo y un coordinador general contacta a todos los miembros para que opinen sobre potenciales riesgos, manteniendo el anonimato de los involucrados. El coordinador le informa a los participantes las razones que justifican distintas opiniones sobre los riesgos identificados y les solicita que reevalúen su respuesta para profundizar el análisis.
+\item Listas de verificación (checklists).
+\item Análisis de supuestos.
+\item SWOT o FODA: identificación de debilidades, amenazas, fortalezas y oportunidades.
+\item Juicio experto.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Registro de riesgos: cada riesgo deberá contener la mayor información posible.
+\begin{itemize}
+\item ID.
+\item Descripción.
+\item Fecha.
+\item Responsable.
+\item Probabilidad de ocurrencia.
+\item Impacto.
+\item Severidad.
+\item Estado.
+\item Estrategia de mitigación.
+\end{itemize}
+\end{itemize}
+\subsection{Realizar análisis cualitativo de los riesgos} \label{sec:analisis_cualitativo}
+Mediante este proceso se determinan las \emph{prioridades} de los riesgos encontrados, y se hace una evaluación de la \emph{probabilidad} y el \emph{impacto} asociado. Es un análisis simple y rápido. La severidad se calcula como el producto entre la probabilidad y el impacto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan de gestión de riesgos.
+\item Registro de riesgos.
+\item Enunciado del alcance del proyecto.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Evaluación de probabilidad e impacto de los riesgos.
+\item Matriz de probabilidad e impacto.
+\item Evaluación de la calidad de los datos de los riesgos.
+\item Categorización de riesgos: agrupar los riesgos por causas comunes.
+\item Evaluación de la urgencia de los riesgos: los riesgos que requieren respuestas a corto plazo pueden ser considerados de atención más urgente.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Actualizaciones al registro de riegos.
+\begin{itemize}
+\item Nuevos riesgos.
+\item Modificaciones a los riesgos existentes.
+\item Respuestas urgentes.
+\end{itemize}
+\end{itemize}
+\subsection{Realizar análisis cuantitativo de los riesgos} \label{sec:analisis_cuantitativo}
+Análisis matemático más profundo de la probabilidad de ocurrencia de los riesgos y sus efectos. Dependerá de las características del proyecto y de los interesados. Puede ocurrir en forma simultanea con el análisis cualitativo.
+
+\paragraph{Entradas}
+Ver sección \ref{sec:analisis_cualitativo}.
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Recolección de datos: entrevistas para recoger datos e información histórica.
+\item Representación de datos: distribuciones de los datos para realizar modelos y simulaciones.
+\item Técnicas de modelaje.
+\begin{itemize}
+\item Análisis de sensibilidad.
+\item Valor monetario esperado: se obtiene de multiplicar la probabilidad de ocurrencia por el impacto.
+\item Árboles de decisión: diagrama que describe las implicaciones de elegir una u otra alternativa entre todas las disponibles.
+\item Modelos y simulación (Montecarlo).
+\end{itemize}
+\item Juicio experto.
+\end{itemize}
+
+\paragraph{Salidas}
+Ver sección \ref{sec:analisis_cualitativo}.
+
+\subsection{Planificar la respuesta a los riesgos} \label{sec:planificar_respuesta_riesgos}
+Define los pasos a seguir en caso de que el riesgo ocurra. Consiste en desarrollar procedimientos y técnicas que permitan mejorar las oportunidades y disminuir las amenazas que inciden sobre los objetivos del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Registro de riesgos: incluye los riesgos identificados, las causas de los mismos, la lista de respuestas potenciales, los propietarios de los riesgos, los síntomas y señales de advertencia, la calificación relativa o lista de prioridades de los riesgos del proyecto, etc.
+\item Plan de gestión de riesgos: roles y responsabilidades, las definiciones del análisis de riesgos, la periodicidad de las revisiones así como los umbrales de riesgo para los riesgos bajos, moderados o altos.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Estrategias para riesgos negativos.
+\begin{itemize}
+\item Evitar: eliminar las causas del mismo.
+\item Transferir: traspasar las responsabilidades a terceros.
+\item Mitigar: reducir el impacto o la probabilidad de ocurrencia.
+\item Aceptar: tomar el impacto del riesgo.
+\end{itemize}
+\item Estrategias para riesgos positivos:
+\begin{itemize}
+\item Aprovechar: lograr la oportunidad.
+\item Compartir: idem transferir.
+\item Mejorar: aumentar las probabilidades.
+\item Aceptar: se toman los beneficios de la ocurrencia.
+\end{itemize}
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Registro de riesgos: estrategias y acciones para cada riesgo, custodios del riesgo, síntomas, señales de alarma y disparadores del riesgo, riesgos residuales, riesgos secundarios, reservas de contingencia.
+\end{itemize}
+
+\paragraph{Contingencia:} La palabra contingencia, generalmente se le asocia con un porcentaje de sobrecostos que aplica el sponsor del proyecto con el fin de proteger al proyecto por posibles riesgos no identificados. Cuando los miembros del equipo del proyecto preparan los estimados de los costos de los entregables del proyecto y de las actividades del proyecto, por lo general incluyen un plazo o un costo de protección. Este plazo o costo se denomina \emph{reserva de contingencia}.
+
+
+\paragraph{Síntomas:} eventos que indican alguna dificultad en el proyecto.
+\paragraph{Disparadores:} cuando las variables superan el nivel aceptable (umbral), se implementan los planes de respuesta al riesgo para aliviar el impacto.
+\paragraph{Riesgo residual:} subsiste después de haber implementado la respuesta. Debe ser aceptado y administrado para verificar que se mantenga dentro de los límites aceptables para el proyecto.
+\paragraph{Riesgo secundario:} es el que se origina como consecuencia directa de la implementación de respuestas a otros riesgos.
+\subsection{Monitorear y controlar los riesgos} \label{sec:controlar_riesgos}
+Realizar el seguimiento del estado de los riesgos potenciales, aplica las respuestas en caso de que ocurran los riesgos, analiza la aparición de nuevos riesgos y evalúa la efectividad del proceso.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Registro de riesgos.
+\item Plan para la dirección del proyecto: contiene el plan de gestión de riesgos, que incluye la tolerancia a los riesgos, los protocolos y asignaciones de personas, el tiempo y otros recursos para la gestión de riesgos del proyecto.
+\item Información sobre el desempeño del trabajo.
+\begin{itemize}
+\item Estado de los entregables.
+\item Avance del cronograma.
+\item Costos incurridos.
+\end{itemize}
+\item Informes de desempeño: analiza los datos de los informes de desempeño del trabajo para brindar información sobre el desempeño del trabajo.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Reevaluación: identificar nuevos riesgos y volver a realizar un análisis cualitativo o cuantitativo de los que ya fueron identificados.
+\item Auditorias: documentar la efectividad de las respuestas implementadas a cada riesgo.
+\item Análisis de variación y tendencias: comparar los resultados del proyecto con su linea base.
+\item Medición del desempeño técnico: comprar los entregables del proyecto con las métricas de calidad pre-establecidas.
+\item Análisis de reservas: comprara las reservas que están quedando en relación a los riesgos restantes. ¿La reserva restante es suficiente?.
+\item Reuniones de estado: colocar en la orden del día de las reuniones de avance los temas relacionados con la gestión de riesgos.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Actualizaciones al registro de riesgos: nuevos riesgos, actualización a la probabilidad de ocurrencia o impacto de los riesgos existentes, a la prioridad, a los planes de respuesta, etc.
+\item Solicitudes de cambio: la implementación de planes de contingencia o soluciones alternativas se traduce a veces en solicitudes de cambio.
+\begin{itemize}
+\item Acciones correctivas recomendadas: planes de contingencia, planes para soluciones alternativas.
+\item Acciones preventivas recomendadas: se utilizan para asegurar la conformidad del proyecto con el PP.
+\end{itemize}
+\item Actualizaciones al PP.
+\end{itemize}
+
+\section{Gestión de los Recursos Humanos del Proyecto}
+Incluye los procesos que organizan, gestionan y conducen el equipo del proyecto. El equipo del proyecto está conformado por aquellas personas a las que se les han asignado roles y responsabilidades para completar el proyecto.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& Iniciación & Planificación & Ejecución & Control &  Cierre \\ \hline
+Integración & 1 & 1 & 1 & 2 & 1 \\ \hline
+Alcance & & 3 & & 2 & \\ \hline
+Tiempo & & 5 & & 1 & \\ \hline
+Costo & & 2 & & 1 & \\ \hline
+Calidad & & 1 & 1 & 1 & \\ \hline
+\rowcolor{Gray} RRHH & & \ref{sec:desarrollar_plan_rrhh} & \ref{sec:adquirir_equipo} - \ref{sec:desarrollar_equipo} - \ref{sec:dirigir_equipo} & & \\ \hline
+Comunicaciones & 1 & 1 & 2 & 1 & \\ \hline
+Riesgos & & 5 & & 1 & \\ \hline
+Adquisiciones &  & 1 & 1 & 1 & 1 \\ \hline
+Total & 2 & 20 & 8 & 10 & 2 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Procesos}
+
+\subsection{Desarrollar el Plan de Recursos Humanos} \label{sec:desarrollar_plan_rrhh}
+Se definen los roles, responsabilidades y habilidades de los miembros del equipo, como así también las relaciones de comunicación.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Requisitos de recursos de la actividad: se utiliza para determinar las necesidades de recursos humanos para el proyecto.
+\item Es necesario conocer:
+\begin{itemize}
+\item ¿Cómo y cuándo se incorporará cada persona?
+\item ¿Cuáles son sus capacidades actuales y sus necesidades de formanción?
+\item ¿Cuáles serán sus roles y responsabilidades?
+\item ¿Cuáles serán los paquetes de trabajo que asignaremos a cada miembro del equipo?
+\item ¿Cuándo deberá enviar los informes cada persona?
+\item ¿Cómo será el plan de recompensas individual y grupal?
+\item ¿Cómo y cuando desafectaremos a las personas?
+\end{itemize}
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Organigramas y descripción de cargos: esquemas donde se explicita el cargo y nivel jerárquico de cada persona. Pueden ser diagramas jerárquicos, diagramas matriciales o documentos de téxto.
+\begin{itemize}
+\item Matrices RAM (Responsability Assignment Matrix).
+\item Matrices RACI (Responsable, Aprueba, Consultado, Informado).
+\end{itemize}
+\item Creación de relaciones de trabajo: es la interacción formal e informal con otras personas dentro de una organización o industria.
+\item Teoría de la organización: provee información sobre el comportamiento de las personas en las organizaciones.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Roles y responsabilidades: rol es el cargo o posición que ocupa una persona en cada actividad del proyecto, mientras que responsables es la persona que debe lograr que la actividad se desarrolle de manera adecuada. El responsable podría ser una persona distinta a la que realiza la actividad.
+\item Organigrama: se establece el nivel jerárquico de los miembros del equipo.
+\item Plan para la dirección del personal: en este plan se detalla cómo se adquirirá el personal, el histograma de recursos, la política para la liberación y reintegro de los recursos, los planes de capacitación, la política de reconocimiento y recompensas, los convenios colectivos de trabajo, las normas de seguridad laboral, etc.
+\end{itemize}
+
+\subsection{Adquirir el Equipo del Proyecto} \label{sec:adquirir_equipo}
+Se obtienen los recursos humanos necesarios para llevar a cabo las actividades del proyecto durante la ejecución del proyecto; planifico contando solamente con algunos miembros clave del equipo.
+\par Durante el proceso de adquirir el equipo de trabajo, el DP deberá:
+\begin{itemize}
+\item Conocer qué personas han sido previamente asignadas al proyecto.
+\item Negociar para obtener los mejores recursos posibles.
+\item Conocer bien las necesidades y las prioridades de la organización.
+\item Contratar a nuevo trabajadores.
+\item Conocer las ventajas y desventajas de los equipos virtuales.
+\end{itemize}
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Plan para la dirección del proyecto.
+\begin{itemize}
+\item Roles y responsabilidades.
+\item Organigrama.
+\item Plan de recursos humanos.
+\end{itemize}
+\item Factores ambientales de la empresa.
+\item Activos de los procesos de la organización.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Asignación previa: personas que ya han sido asignadas al proyecto.
+\item Negociación: negociar los mejores recursos con los gerentes funcionales y otros DP.
+\item Adquisición: realizar una contratación externa o un terciarización.
+\item Equipos virtuales: cuando las personas no están en el mismo lugar físico se puede coordinar los equipos de trabajo remotos con tecnologías como internet o videoconferencias.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Asignación del personal del proyecto: se considera que el proyecto está dotado de personal cuando las personas apropiadas han sido asignadas de acuerdo con los métodos descritos anteriormente.
+\item Calendario de recursos: documentan los períodos de tiempo durante los cuales cada miembro del equipo del proyecto pueden trabajar en el proyecto.
+\end{itemize}
+
+\subsection{Desarrollar el Equipo del Proyecto} \label{sec:desarrollar_equipo}
+Se mejoran las competencias y las habilidades de interacción entre los miembros del equipo. Debe desarrollarse durante todas las fases del proyecto.
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Asignación del personal del proyecto: identifica a las personas que integran el equipo.
+\item Plan para la dirección del proyecto: contiene el plan de recursos  humanos que identifica las estrategias de capacitación y los planes de desarrollo del equipo del proyecto.
+\item Calendarios de recursos: identifican cuando los miembros del equipo del proyecto pueden participar en las actividades de desarrollo del equipo.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Habilidades interpersonales: un buen DP requiere habilidades de liderazgo, motivación, trabajo en equipo, empatía, creatividad, etc.
+\item Capacitación: actividades de formación para mejorar competencias.
+\item Actividades de desarrollo del espíritu de equipo: trabajo en equipo, por ejemplo, crear la EDT involucrando al equipo.
+\item Reglas básicas: establecer normas de convivencia.
+\item Re-ubicación: colocar a los miembros del equipo de proyecto en un mismo lugar físico de trabajo.
+\item Reconocimiento y recompensas: utilizar un sistema de incentivos para premiar comportamientos positivos.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Evaluación del desempeño del equipo: se elaboran informes con las competencias adquiridas por los trabajadores y la efectividad del trabajo en equipo.
+\end{itemize}
+
+\paragraph{Liderazgo:} existen distintos tipos de liderazgo.
+\begin{itemize}
+\item Directivo: decir que hay que hacer.
+\item Consultivo (Coaching): dar instrucciones.
+\item Participativo (Supporting): brindar asistencia.
+\item Delegativo (Empowerment): el empleado decide por si solo.
+\item Facilitador: coordina a los demás.
+\item Autocrático: tomar decisiones sin consultar.
+\item Consenso: resolución de problemas grupales.
+\end{itemize}
+
+\paragraph{Motivación:} existen varias doctrinas.
+\begin{itemize}
+\item Maslow: no se puede motivar a una persona si no han sido satisfechas sus necesidades básicas (fisiológicas, seguridad, social, estima, autoestima).
+\item Mc Gregor (el lado humano de las organizaciones): las personas pertenecen a una de dos categorías.
+\begin{itemize}
+\item Teoría X: incapaz, evita el trabajo, no quiere responsabilidades, debe ser controlado por el superior.
+\item Teoría Y: trabaja aunque nadie lo supervise, quiere asumir compromisos y progresar.
+\end{itemize}
+\item Teoría de las necesidades: las personas tienen tres tipos de necesidades. Según sus necesidades será la motivación que necesite.
+\begin{itemize}
+\item Logro: proyectos desafiantes pero con objetivos alcanzables, para ser reconocido.
+\item Afiliación: se sentirán cómodos trabajando en equipo con otras personas.
+\item Poder: los motiva el liderazgo, deberían dirigir a otras personas.
+\end{itemize}
+\item Teoría de las expectativas: Esfuerzo $\rightarrow$ mejor desempeño $\rightarrow$ recompensa $\rightarrow$ satisfacer necesidades $\rightarrow$ volver a esforzarse.
+\end{itemize}
+
+\subsection{Dirigir el Equipo del Proyecto}
+\label{sec:dirigir_equipo}
+Se monitorea el desempeño individual y grupal de cada persona y resuelven los conflictos que suelen ocurrir entre los miembros del equipo. Incluye:
+\begin{itemize}
+\item Influenciar el equipo del proyecto: Estar atento a los factores de recursos humanos que podrían tener un impacto en el proyecto e influenciarlos cuando sea posible.
+\item Comportamiento profesional y ético: El equipo de dirección del proyecto debe estar atento a que todos los miembros del equipo adopten un comportamiento ético, suscribirse a ello y asegurarse de que así sea.
+\end{itemize}
+
+\paragraph{Entradas}
+\begin{itemize}
+\item Asignaciones del personal del proyecto: incluye a los miembros del equipo del proyecto.
+\item Plan para la dirección del proyecto: contiene el plan de recursos humanos.
+\begin{itemize}
+\item Roles y responsabilidades.
+\item Organización del proyecto.
+\item Plan para la dirección del personal.
+\end{itemize}
+\item Evaluaciones del desempeño del equipo.
+\item Informes de desempeño.
+\end{itemize}
+
+\paragraph{Técnicas y Herramientas}
+\begin{itemize}
+\item Observaciones y conversación.
+\item Evaluaciones de desempeño.
+\item Gestión de conflictos.
+\item Registro de incidentes.
+\item Habilidades interpersonales.
+\end{itemize}
+
+\paragraph{Salidas}
+\begin{itemize}
+\item Solicitudes de cambio.
+\item Actualizaciones al PP.
+\item Actualizaciones a los activos de los procesos de la organización.
+\end{itemize}
+
+\end{document}
